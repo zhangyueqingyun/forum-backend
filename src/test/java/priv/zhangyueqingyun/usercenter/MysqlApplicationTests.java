@@ -1,4 +1,4 @@
-package priv.zhangyueqingyun.mysql;
+package priv.zhangyueqingyun.usercenter;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

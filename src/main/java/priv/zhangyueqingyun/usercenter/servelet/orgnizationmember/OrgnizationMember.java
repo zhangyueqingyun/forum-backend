@@ -1,11 +1,11 @@
-package priv.zhangyueqingyun.usercenter.orgnizationmember;
+package priv.zhangyueqingyun.usercenter.servelet.orgnizationmember;
 
-import priv.zhangyueqingyun.usercenter.user.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import priv.zhangyueqingyun.usercenter.servelet.user.User;
 
 @Getter
 @Setter

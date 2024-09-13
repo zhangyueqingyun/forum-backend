@@ -1,4 +1,4 @@
-package priv.zhangyueqingyun.usercenter.orgnizationmember;
+package priv.zhangyueqingyun.usercenter.servelet.orgnizationmember;
 
 import org.springframework.data.repository.CrudRepository;
 

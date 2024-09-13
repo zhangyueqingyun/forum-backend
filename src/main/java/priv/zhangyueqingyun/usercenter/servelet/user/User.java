@@ -1,14 +1,13 @@
-package priv.zhangyueqingyun.usercenter.user;
+package priv.zhangyueqingyun.usercenter.servelet.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Column;
 import lombok.Getter;
 import lombok.Setter;
+import priv.zhangyueqingyun.usercenter.servelet.systemuser.SystemUser;
 
 import java.util.Date;
-
-import priv.zhangyueqingyun.usercenter.systemuser.SystemUser;
 
 @Getter
 @Setter

@@ -1,4 +1,4 @@
-package priv.zhangyueqingyun.usercenter.interceptors;
+package priv.zhangyueqingyun.usercenter.http.interceptors;
 
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;

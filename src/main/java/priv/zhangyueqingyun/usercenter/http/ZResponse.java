@@ -1,4 +1,4 @@
-package priv.zhangyueqingyun.usercenter.base;
+package priv.zhangyueqingyun.usercenter.http;
 
 import org.springframework.stereotype.Component;
 

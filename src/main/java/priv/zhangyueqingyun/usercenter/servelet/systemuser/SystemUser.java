@@ -1,4 +1,4 @@
-package priv.zhangyueqingyun.usercenter.systemuser;
+package priv.zhangyueqingyun.usercenter.servelet.systemuser;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

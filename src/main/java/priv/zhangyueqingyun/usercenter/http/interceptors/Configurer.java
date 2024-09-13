@@ -1,4 +1,4 @@
-package priv.zhangyueqingyun.usercenter.interceptors;
+package priv.zhangyueqingyun.usercenter.http.interceptors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package priv.zhangyueqingyun.usercenter.user;
+package priv.zhangyueqingyun.usercenter.servelet.user;
 
 import org.springframework.data.repository.CrudRepository;
 

@@ -1,9 +1,9 @@
-package priv.zhangyueqingyun.usercenter.user;
+package priv.zhangyueqingyun.usercenter.servelet.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import priv.zhangyueqingyun.usercenter.base.ZResponse;
+import priv.zhangyueqingyun.usercenter.http.ZResponse;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

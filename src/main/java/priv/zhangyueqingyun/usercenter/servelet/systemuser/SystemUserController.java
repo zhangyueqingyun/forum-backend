@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping(path="/system-user")
 public class SystemUserController {  
@@ -19,13 +21,14 @@ public class SystemUserController {
   private SystemUserRepository systemUserRepository;
 
   @PostMapping(path="/add")
-  public ZResponse addNewUser (SystemUser systemUser) {
+  public ZResponse addSystemUser (SystemUser systemUser) {
+    systemUser.setUuid(UUID.randomUUID().toString());
     systemUserRepository.save(systemUser);
     return response.addSuccess("系统用户", systemUser);
   }
 
   @GetMapping(path="/all")
-  public Iterable<SystemUser> getAllUser() {
+  public Iterable<SystemUser> getAllSystemUser() {
       return systemUserRepository.findAll();
   }
 }

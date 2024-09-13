@@ -1,5 +1,7 @@
 package priv.zhangyueqingyun.usercenter.servelet.user;
 
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,7 +21,8 @@ public class UserController {
   private ZResponse response;
 
   @PostMapping(path="/add")
-  public Object addNewUser (User user) {
+  public Object addUser (User user) {
+    user.setUuid(UUID.randomUUID().toString());
     userRepository.save(user);
     return response.addSuccess("用户", user);
   }

@@ -1,5 +1,7 @@
 package priv.zhangyueqingyun.usercenter.servelet.orgnizationmember;
 
+import java.util.UUID;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -19,15 +21,16 @@ public class OrgnizationMemberController {
   private OrgnizationMemberRepository orgnizationMemberRepository;
 
   @PostMapping(path="/add")
-  public ZResponse addNewUser (
+  public ZResponse addOrgnizationMember (
     OrgnizationMember orgnizationMember
   ) {
+    orgnizationMember.setUuid(UUID.randomUUID().toString());
     orgnizationMemberRepository.save(orgnizationMember);
     return response.addSuccess("组织成员", orgnizationMember);
   }
 
   @GetMapping(path="/all")
-  public Iterable<OrgnizationMember> getAllUser() {
+  public Iterable<OrgnizationMember> getAllOrgnizationMember() {
       return orgnizationMemberRepository.findAll();
   }
 }

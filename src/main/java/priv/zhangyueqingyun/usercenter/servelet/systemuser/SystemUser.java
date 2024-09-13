@@ -19,42 +19,44 @@ public class SystemUser {
   @Id
   @GeneratedValue(strategy=GenerationType.IDENTITY)
   @Column(name = "id")
-  protected Integer id;
+  private Integer id;
+
+  private String uuid;
   
   @Column(name = "username")
-  protected String username;
+  private String username;
 
   @Column(name = "nickname")
-  protected String nickname;
-  protected String avatar;
-  protected String status; 
+  private String nickname;
+  private String avatar;
+  private String status; 
 
   @Column(name = "create_at")
-  protected Date createAt;
+  private Date createAt;
   
   @Column(name = "create_by")
-  protected String createBy;
+  private String createBy;
   
   @Column(name = "update_at")
-  protected Date updateAt;
+  private Date updateAt;
   
   @Column(name = "update_by")
-  protected String updateBy;
+  private String updateBy;
   
   @Column(name = "login_count")
-  protected Integer loginCount;
+  private Integer loginCount;
   
   @Column(name = "last_login")
-  protected Date lastLogin;
+  private Date lastLogin;
   
   @Column(name = "signed_up")
-  protected Boolean signedUp;
+  private Boolean signedUp;
 
-  protected Boolean blocked;
+  private Boolean blocked;
   
   @Column(name = "last_ip")
-  protected String lastIp;
+  private String lastIp;
   
-  protected String device;
-  protected String browser;
+  private String device;
+  private String browser;
 }

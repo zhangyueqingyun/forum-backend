@@ -1,35 +1,40 @@
 package priv.zhangyueqingyun.usercenter.orgnizationmember;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
+
+import priv.zhangyueqingyun.usercenter.base.ZResponse;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-@Controller // This means that this class is a Controller
+@RestController
 @RequestMapping(path="/orgnization-member") // This means URL's start with /demo (after Application path)
-public class OrgnizationMemberController {
+public class OrgnizationMemberController {  
+  @Autowired
+  private ZResponse response;
+
   @Autowired
   private OrgnizationMemberRepository orgnizationMemberRepository;
 
   @PostMapping(path="/add")
-  public @ResponseBody String addNewUser (
-    @RequestParam String username,
-    @RequestParam String nickname,
-    @RequestParam String avatar
+  public ZResponse addNewUser (
+    @RequestParam("username") String username,
+    @RequestParam("nickname") String nickname,
+    @RequestParam("avatar") String avatar
   ) {
     OrgnizationMember orgnizationMember = new OrgnizationMember();
     orgnizationMember.setUsername(username);
     orgnizationMember.setNickname(nickname);
     orgnizationMember.setAvatar(avatar);
     orgnizationMemberRepository.save(orgnizationMember);
-    return "保存成功！";
+    return response.addSuccess("组织成员", orgnizationMember);
   }
 
   @GetMapping(path="/all")
-  public @ResponseBody Iterable<OrgnizationMember> getAllUser() {
+  public Iterable<OrgnizationMember> getAllUser() {
       return orgnizationMemberRepository.findAll();
   }
 }

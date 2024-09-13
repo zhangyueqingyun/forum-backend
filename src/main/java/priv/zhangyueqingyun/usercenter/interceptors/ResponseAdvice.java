@@ -5,8 +5,6 @@ import org.springframework.core.MethodParameter;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.stereotype.Component;
-
 import org.springframework.http.MediaType;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
@@ -15,14 +13,10 @@ import org.springframework.http.converter.HttpMessageConverter;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import lombok.Getter;
-import lombok.Setter;
 import priv.zhangyueqingyun.usercenter.base.ZResponse;
 
 import java.util.LinkedHashMap;
 
-
-@ResponseBody
 @RestControllerAdvice
 public class ResponseAdvice implements ResponseBodyAdvice<Object> {
   @Autowired

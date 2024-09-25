@@ -1,4 +1,4 @@
-package priv.zhangyueqingyun.usercenter.servelet.orgnizationmember;
+package priv.zhangyueqingyun.usercenter.servelet.organizationmember;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,12 +11,12 @@ import priv.zhangyueqingyun.usercenter.servelet.user.User;
 @Setter
 @Entity 
 @Table(name = "user")
-public class OrgnizationMember extends User {
-  @Column(name = "orgnization_id")
-  private String orgnizationId;
+public class OrganizationMember extends User {
+  @Column(name = "organization_id")
+  private String organizationId;
   
-  @Column(name = "orgnization_name")
-  private String orgnizationName;
+  @Column(name = "organization_name")
+  private String organizationName;
 
   @Column(name = "job_number")
   private String jobNumber;

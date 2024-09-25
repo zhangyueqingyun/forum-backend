@@ -1,7 +1,6 @@
 package priv.zhangyueqingyun.usercenter.servelet.systemuser;
 
-import org.springframework.data.repository.CrudRepository;
+import priv.zhangyueqingyun.usercenter.servelet.BaseRepository;
 
-public interface SystemUserRepository extends CrudRepository<SystemUser, Integer>{
-  
+public interface SystemUserRepository extends BaseRepository<SystemUser, Integer>{
 }
